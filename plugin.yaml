@@ -1,0 +1,6 @@
+plugin:
+    name: 'ibsellnet.downloadmediafiles::lang.plugin.name'
+    description: 'ibsellnet.downloadmediafiles::lang.plugin.description'
+    author: ibsellnet
+    icon: oc-icon-slideshare
+    homepage: ''

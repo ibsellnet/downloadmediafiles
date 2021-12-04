@@ -1,0 +1,16 @@
+{# show folder like title #}
+{% if bShowTitle == 0 %}
+    <h3 class="title--title2 blue">{{key}}</h3>
+    {% set bShowTitle = 1 %}
+{% endif %}
+{% for oneF1Title, oneF1 in oneFolder %}
+    {% if oneF1[0].sFileName != ''%}
+        <h3 class="title--title2 blue ibs-sucategtitle">{{oneF1Title}}</h3>
+        {# show the files #}
+        {% for oneFile in oneF1 %}
+        <div class="ibsfilerow ibs-sucategtitle"><p><a href="{{url('/')}}/{{oneFile.sFullPath}}" target="_blank">{{oneFile.sFileName}}</a></p></div>
+        {% endfor %}
+    {% else %}
+        {# <h3 class="title--title2 blue">{{oneF1Title}}</h3> #}
+    {% endif %}
+{% endfor %}

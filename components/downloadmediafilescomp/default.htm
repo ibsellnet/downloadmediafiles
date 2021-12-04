@@ -1,0 +1,26 @@
+<div class="ibsdownloadmediafiles txt--p1 grey">
+    {% set bShowTitle = 0 %}
+    {% for key,oneFolder in arrDirectoriesWithFiles %}
+        {% if oneFolder[0].sFileName != ''%}
+            {% set bShowTitle = 1 %}
+            {% if key !='rootibs' %}
+                <h3 class="title--title2 blue">{{key}}</h3>
+            {% endif %}
+            {# show the files #}
+            {% for oneFile in oneFolder %}
+                <div class="ibsfilerow"> <p><a href="{{url('/')}}/{{oneFile.sFullPath}}" target="_blank">{{oneFile.sFileName}}</a></p></div>
+            {% endfor %}
+
+            {% partial __SELF__~"::partialfilesfolders" bShowTitle=bShowTitle oneFolder=oneFolder key=key %}
+        {% else %}
+            {% set bShowTitle = 0 %}
+            {% partial __SELF__~"::partialfilesfolders" bShowTitle=bShowTitle oneFolder=oneFolder key=key %}
+        {% endif %}
+    {% endfor %}
+</div>
+
+<style>
+    .ibsdownloadmediafiles .ibs-sucategtitle{
+        padding-left: 50px;
+    }
+</style>
