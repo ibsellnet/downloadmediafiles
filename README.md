@@ -5,7 +5,7 @@ Is compatible with: October CMS verision 1 and October CMS version 2
 
 We also recorded a video tutorial showing how to use the plugin to build a simple library plugin: [watch the video](https://www.loom.com/share/1502c8645691439c86a40458ca57a456).
 
-## What you can do with Builder
+## What you can do with DownloadMediaFiles
 
 * any guest will be able to see the documents
 * and only the admin can connect to the backoffice to change the documents (remove, add documents)
